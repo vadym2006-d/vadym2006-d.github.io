@@ -1,0 +1,59 @@
+<script>
+function contactsSendMessage(){
+
+  var objName = $("[name=Name]");
+  var objEmail = $("[name=Email]");
+  var objMessage = $("[name=Message]");
+  var name = objName.val();
+  var email = objEmail.val();
+  var message = objMessage.val();
+  var messErr;
+  
+  $("p.error_massage").text("");
+  $("input, textarea").removeClass("error");
+  
+  if(name == ""){
+    objName.parent().parent().find("p.error_massage").text("Введіть, будь ласка, Ваше ім'я");
+    objName.addClass("error").select();
+  }else if(messErr = fn.checkEmail(email)){
+    objEmail.parent().parent().find("p.error_massage").text(messErr);
+    objEmail.addClass("error").select();
+  }else if(message == ""){
+    objMessage.parent().parent().find("p.error_massage").text("Введіть, будь ласка, Ваше повідомлення");
+    objMessage.addClass("error").select();
+}
+</script>
+
+
+<style>
+</style>
+<p id="form_tit">Напишіть нам і Ви обов'язково отримаєте відповідь</p>
+        <div>
+        <p>
+          <label for="">
+            Ваше ім'я:          </label>
+          <br>
+          <input class="error" name="Name" type="text">          
+        </p>
+        <p class="error_massage"></p>
+        </div>
+        <div>
+        <p>
+          <label for="">
+            Ваш email:          </label>
+          <br>
+          <input name="Email" type="text">
+         
+        </p>
+       <p class="error_massage"></p>
+        </div>
+        <div>
+        <p>
+          <label for="">
+            Ваше повідомлення:          </label><br>
+          <textarea name="Message" id="" cols="30" rows="10"></textarea>
+          
+        </p>
+      <p class="error_massage"></p>
+       </div> 
+        <button type="button" onclick="contactsSendMessage()" class="in_cart">Надіслати повідомлення</button>
