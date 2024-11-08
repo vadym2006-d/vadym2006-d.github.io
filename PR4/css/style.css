@@ -1,0 +1,52 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.todo-container {
+    width: 300px;
+    text-align: center;
+}
+
+input, button {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    font-size: 1em;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+.task {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid #ddd;
+    margin-bottom: 5px;
+    position: relative;
+}
+
+.task.completed {
+    color: gray;
+    text-decoration: line-through;
+}
+
+.task input[type="checkbox"] {
+    margin-right: 10px;
+}
+.task button {
+    background-color: red;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 1em;
+    padding: 5px;
+}
