@@ -1,0 +1,186 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+body {
+    background-color: #0F4C5C;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #133A46;
+    border-radius: 10px;
+    padding: 40px;
+    width: 100%;
+    max-width: 900px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+.left {
+    flex: 1;
+    padding-right: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.left h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+.highlight {
+    color: #00BFA6;
+}
+.contact-info {
+    margin-bottom: 20px;
+}
+.info-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+    margin-left: -7px;
+}
+.info-item:nth-child(1){
+    margin-top: 20px;
+}
+.info-item img {
+    width: 40px;
+    margin-right: 10px;
+}
+.info-item p {
+    font-size: 0.9em;
+}
+.social-icons {
+    display: flex;
+    gap: 10px;
+}
+.social-icons img {
+    width: 50px;
+    height: 50px;
+    margin-left: -10px;
+}
+.right {
+    flex: 1;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.right h2 {
+    margin-bottom: 20px;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.interests {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.interest-item {
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+.interest-item input {
+    display: none;
+}
+.interest-item label {
+    display: block;
+    background-color: #E8F0F2;
+    border-radius: 20px;
+    padding: 10px 20px;
+    cursor: pointer;
+    text-align: center;
+    font-size: 0.9em;
+}
+.interest-item input:checked + label {
+    background-color: #0F4C5C;
+    color: white;
+}
+form input[type="text"],
+form input[type="email"],
+form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+form textarea {
+    resize: none;
+    height: 80px;
+}
+form button {
+    background-color: #0F4C5C;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+form button:hover {
+    background-color: #133A46;
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        padding: 20px;
+    }
+    .left, .right {
+        width: 100%;
+        padding: 10px 0;
+    }
+    .left h1 {
+        font-size: 1.5em;
+        text-align: center;
+    }
+    .info-item img {
+        width: 35px;
+    }
+    .info-item p {
+        font-size: 0.85em;
+    }
+    .social-icons img {
+        width: 40px;
+        height: 40px;
+    }
+    .right h2 {
+        text-align: center;
+    }
+}
+@media (max-width: 480px) {
+    .container {
+        padding: 10px;
+    }
+    .left h1 {
+        font-size: 1.2em;
+    }
+    .info-item p {
+        font-size: 0.8em;
+    }
+    .interest-item label {
+        padding: 8px 15px;
+        font-size: 0.8em;
+    }
+    form input[type="text"],
+    form input[type="email"],
+    form textarea {
+        font-size: 0.9em;
+    }
+    form button {
+        padding: 8px;
+    }
+}
+
