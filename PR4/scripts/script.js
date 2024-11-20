@@ -1,10 +1,17 @@
+// Додаємо обробник події, який виконується, коли сторінка повністю завантажена.
 document.addEventListener("DOMContentLoaded", loadTasks);
+
+// Отримуємо елементи списку завдань і поля введення за їхніми id.
 const taskList = document.getElementById("task-list");
 const newTaskInput = document.getElementById("new-task-input");
+
+// Функція завантажує завдання з localStorage і додає їх до списку.
 function loadTasks() {
     const tasks = JSON.parse(localStorage.getItem("tasks")) || [];
     tasks.forEach(task => addTaskElement(task));
 }
+
+// Функція для збереження завдань у localStorage.
 function saveTasks() {
     const tasks = [];
     document.querySelectorAll(".task").forEach(taskEl => {
@@ -16,6 +23,8 @@ function saveTasks() {
     });
     localStorage.setItem("tasks", JSON.stringify(tasks));
 }
+
+// Додаємо обробник події на поле введення, який реагує на натискання клавіші Enter.
 newTaskInput.addEventListener("keydown", function (e) {
     if (e.key === "Enter" && newTaskInput.value.trim() !== "") {
         const task = {
@@ -28,10 +37,12 @@ newTaskInput.addEventListener("keydown", function (e) {
         newTaskInput.value = "";
     }
 });
+
+// Функція для створення елементу завдання і додавання його до списку.
 function addTaskElement(task) {
     const taskEl = document.createElement("li");
     taskEl.className = "task" + (task.completed ? " completed" : "");
-    
+
     const checkbox = document.createElement("input");
     checkbox.type = "checkbox";
     checkbox.checked = task.completed;
@@ -49,18 +60,24 @@ function addTaskElement(task) {
     const deleteBtn = document.createElement("button");
     deleteBtn.textContent = "X";
     deleteBtn.addEventListener("click", () => {
-        taskEl.remove();
-        saveTasks();
+        // Додаємо підтвердження перед видаленням завдання.
+        if (confirm("Ви точно хочете видалити це завдання?")) {
+            taskEl.remove();
+            saveTasks();
+        }
     });
 
     taskEl.append(checkbox, taskText, taskDate, deleteBtn);
     taskList.prepend(taskEl);
 }
+
+// Функція для зміни статусу виконання завдання.
 function toggleComplete(taskEl) {
     taskEl.classList.toggle("completed");
-    taskEl.querySelector("input[type='checkbox']").style.display = "none";
     saveTasks();
 }
+
+// Функція для редагування тексту завдання.
 function editTask(taskText) {
     const input = document.createElement("input");
     input.type = "text";
@@ -75,6 +92,8 @@ function editTask(taskText) {
     taskText.replaceWith(input);
     input.focus();
 }
+
+// Функція для сортування завдань за станом виконання.
 function sortTasks() {
     const tasks = Array.from(taskList.children);
     tasks.sort((a, b) => {
