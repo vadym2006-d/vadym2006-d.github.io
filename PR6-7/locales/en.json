@@ -1,0 +1,24 @@
+{
+    "title": "Super Hero Squad",
+    "subtitle": "Hometown: Metro City // Formed: 2022",
+    "hero1": {
+      "name": "Molecule Man",
+      "identity": "Secret identity: Dan Jukes",
+      "age": "Age: 29",
+      "powers": ["Radiation resistance", "Turning fire", "Radiation blast"]
+    },
+    "hero2": {
+      "name": "Madame Uppercut",
+      "identity": "Secret identity: Jane Wilson",
+      "age": "Age: 39",
+      "powers": ["Million tone punch", "Damage resistance", "Superhuman reflexes"]
+    },
+    "hero3": {
+      "name": "Eternal Flame",
+      "identity": "Secret identity: Unknown",
+      "age": "Age: 1000000",
+      "powers": ["Heat immunity", "Inferno", "Teleportation", "Interdimensional travel"]
+    },
+    "button": "Switch to Ukrainian"
+  }
+  
