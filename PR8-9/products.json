@@ -1,91 +1,90 @@
 {
-    "uk": [
-      {
-        "id": 1,
-        "name": "Рюкзак 30л",
-        "price": "1200 грн",
-        "availability": "Додати в кошик",
-        "image": "../img/backpack.png"
-      },
-      {
-        "id": 2,
-        "name": "Намет для 4 осіб",
-        "price": "4500 грн",
-        "availability": "У продажу скоро",
-        "image": "../img/tent.png"
-      },
-      {
-        "id": 3,
-        "name": "Термос 1л",
-        "price": "800 грн",
-        "availability": "Додати в кошик",
-        "image": "../img/thermo.png"
-      },
-      {
-        "id": 4,
-        "name": "Карабін",
-        "price": "1500 грн",
-        "availability": "У продажу скоро",
-        "image": "../img/shotgun.png"
-      },
-      {
-        "id": 5,
-        "name": "Спальний мішок",
-        "price": "2200 грн",
-        "availability": "Додати в кошик",
-        "image": "../img/sleeping-bag.png"
-      },
-      {
-        "id": 6,
-        "name": "Ліхтарик",
-        "price": "400 грн",
-        "availability": "Додати в кошик",
-        "image": "../img/flashlight.png"
-      }
-    ],
-    "en": [
-      {
-        "id": 1,
-        "name": "Backpack 30L",
-        "price": "1200 UAH",
-        "availability": "Add to Cart",
-        "image": "../img/backpack.png"
-      },
-      {
-        "id": 2,
-        "name": "Tent for 4 People",
-        "price": "4500 UAH",
-        "availability": "Coming Soon",
-        "image": "../img/tent.png"
-      },
-      {
-        "id": 3,
-        "name": "Thermos 1L",
-        "price": "800 UAH",
-        "availability": "Add to Cart",
-        "image": "../img/thermo.png"
-      },
-      {
-        "id": 4,
-        "name": "Carabiner",
-        "price": "1500 UAH",
-        "availability": "Coming Soon",
-        "image": "../img/shotgun.png"
-      },
-      {
-        "id": 5,
-        "name": "Sleeping Bag",
-        "price": "2200 UAH",
-        "availability": "Add to Cart",
-        "image": "../img/sleeping-bag.png"
-      },
-      {
-        "id": 6,
-        "name": "Flashlight",
-        "price": "400 UAH",
-        "availability": "Add to Cart",
-        "image": "../img/flashlight.png"
-      }
-    ]
-  }
-  
+  "uk": [
+    {
+      "id": 1,
+      "name": "Рюкзак 30л",
+      "price": "1200 грн",
+      "availability": "Додати в кошик",
+      "image": "/img/backpack.png"
+    },
+    {
+      "id": 2,
+      "name": "Намет для 4 осіб",
+      "price": "4500 грн",
+      "availability": "У продажу скоро",
+      "image": "/img/tent.png"
+    },
+    {
+      "id": 3,
+      "name": "Термос 1л",
+      "price": "800 грн",
+      "availability": "Додати в кошик",
+      "image": "/img/thermo.png"
+    },
+    {
+      "id": 4,
+      "name": "Карабін",
+      "price": "1500 грн",
+      "availability": "У продажу скоро",
+      "image": "/img/shotgun.png"
+    },
+    {
+      "id": 5,
+      "name": "Спальний мішок",
+      "price": "2200 грн",
+      "availability": "Додати в кошик",
+      "image": "/img/sleeping-bag.png"
+    },
+    {
+      "id": 6,
+      "name": "Ліхтарик",
+      "price": "400 грн",
+      "availability": "Додати в кошик",
+      "image": "/img/flashlight.png"
+    }
+  ],
+  "en": [
+    {
+      "id": 1,
+      "name": "Backpack 30L",
+      "price": "1200 UAH",
+      "availability": "Add to Cart",
+      "image": "/img/backpack.png"
+    },
+    {
+      "id": 2,
+      "name": "Tent for 4 People",
+      "price": "4500 UAH",
+      "availability": "Coming Soon",
+      "image": "/img/tent.png"
+    },
+    {
+      "id": 3,
+      "name": "Thermos 1L",
+      "price": "800 UAH",
+      "availability": "Add to Cart",
+      "image": "/img/thermo.png"
+    },
+    {
+      "id": 4,
+      "name": "Carabiner",
+      "price": "1500 UAH",
+      "availability": "Coming Soon",
+      "image": "/img/shotgun.png"
+    },
+    {
+      "id": 5,
+      "name": "Sleeping Bag",
+      "price": "2200 UAH",
+      "availability": "Add to Cart",
+      "image": "/img/sleeping-bag.png"
+    },
+    {
+      "id": 6,
+      "name": "Flashlight",
+      "price": "400 UAH",
+      "availability": "Add to Cart",
+      "image": "/img/flashlight.png"
+    }
+  ]
+}
