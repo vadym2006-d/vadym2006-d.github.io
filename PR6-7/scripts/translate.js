@@ -1,6 +1,5 @@
 let currentLang = 'en';
 
-// Функція для завантаження локалізації
 async function loadTranslations(lang) {
   try {
     const response = await fetch(`locales/${lang}.json`);
@@ -11,18 +10,15 @@ async function loadTranslations(lang) {
   }
 }
 
-// Оновлення контенту на основі обраної мови
 async function updateContent() {
   const translations = await loadTranslations(currentLang);
 
   if (!translations) return;
-
-  // Оновлення заголовка, підзаголовка і кнопки
+  
   document.querySelector('h1').textContent = translations.title;
   document.querySelector('p').textContent = translations.subtitle;
   document.getElementById('languageSwitchBtn').textContent = translations.button;
 
-  // Оновлення героїв
   const heroesSection = document.getElementById('heroes');
   heroesSection.innerHTML = ''; // Очищуємо вміст перед оновленням
 
@@ -41,11 +37,9 @@ async function updateContent() {
   }
 }
 
-// Перемикач мови
 document.getElementById('languageSwitchBtn').addEventListener('click', async () => {
   currentLang = currentLang === 'en' ? 'uk' : 'en';
   await updateContent();
 });
 
-// Початкове завантаження: завантажуємо контент англійською
 document.addEventListener('DOMContentLoaded', updateContent);
