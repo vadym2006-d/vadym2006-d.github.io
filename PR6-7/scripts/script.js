@@ -1,11 +1,8 @@
-// URL JSON-файлу для англійської мови
 const jsonURL = 'locales/en.json';
 
-// Отримуємо елементи з DOM
 const header = document.querySelector('header');
 const section = document.querySelector('section');
 
-// Функція для завантаження JSON
 async function fetchHeroes() {
   try {
     const response = await fetch(jsonURL);
@@ -17,7 +14,6 @@ async function fetchHeroes() {
   }
 }
 
-// Функція для заповнення заголовка сторінки
 function populateHeader(data) {
   const h1 = document.createElement('h1');
   h1.textContent = data.squadName;
@@ -28,7 +24,6 @@ function populateHeader(data) {
   header.appendChild(p);
 }
 
-// Функція для створення карток героїв
 function showHeroes(data) {
   const heroes = data.members;
 
@@ -63,5 +58,4 @@ function showHeroes(data) {
   });
 }
 
-// Викликаємо функцію завантаження даних
 fetchHeroes();
